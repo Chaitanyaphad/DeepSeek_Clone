@@ -4,7 +4,7 @@ import connectDB  from "../../../config/db";
 import User from "../../../model/User";
 import { NextResponse } from "next/server";
 
-export async function POST(req : any){
+export async function POST(req){
     const signingSecret = process.env.SIGNING_SECRET;
     if (!signingSecret) {
         throw new Error("SIGNING_SECRET is not set");

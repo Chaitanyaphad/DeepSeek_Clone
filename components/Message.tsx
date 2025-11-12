@@ -2,7 +2,7 @@ import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 
-const Message = ({role, content}) => {
+const Message: React.FC<{ role: string; content: string }> = ({role, content}) => {
   return (
     <div className='flex flex-col items-center w-full max-w-3xl text-sm'>
         <div className={`flex flex-col w-full mb-8 ${role === 'user' && 'items-end'}`}>

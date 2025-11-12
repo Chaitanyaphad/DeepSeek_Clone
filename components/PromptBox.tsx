@@ -2,7 +2,7 @@ import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import { useState } from 'react'
 
-const PromptBox = ({isLoading, setIsLoading}) => {
+const PromptBox: React.FC<{ isLoading: boolean; setIsLoading: React.Dispatch<React.SetStateAction<boolean>> }> = ({isLoading, setIsLoading}) => {
 
     const [prompt, setPrompt] = useState('');
   return (

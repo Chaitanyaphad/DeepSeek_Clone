@@ -62,7 +62,7 @@ const Sidebar: React.FC<{ expand: boolean; setExpand: React.Dispatch<React.SetSt
                 {expand && <><span>Get App</span> <Image src={assets.new_icon} alt='' /></>}
             </div>
             
-            <div onClick={ user ? null : openSignIn} 
+            <div onClick={(e) => { if (!user) openSignIn(); }} 
             className={`flex items-center ${expand ? 'hover:bg-white/10 rounded-lg' : 'justify-center w-full'} gap-3 text-white/60 text-sm p-2 mt-2 cursor-pointer`}>
                 
                 {

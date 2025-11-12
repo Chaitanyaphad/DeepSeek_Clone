@@ -1,7 +1,7 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
 
-const ChatLabel = ({openMenu, setOpenMenu}) => {
+const ChatLabel: React.FC<{ openMenu: any; setOpenMenu: React.Dispatch<React.SetStateAction<any>> }> = ({openMenu, setOpenMenu}) => {
   return (
     <div className='flex items-center justify-between p-2 text-white/80 hover:bg-white/10 rounded-lg text-sm group cursor-pointer'>
         <p className='group-hover:max-w-5/6 truncate'>Chat Name Here</p>
